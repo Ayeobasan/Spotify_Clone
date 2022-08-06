@@ -1,0 +1,195 @@
+.mainDicover {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: 1;
+    flex-grow: 1;
+    overflow-x: scroll;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+label {
+    margin: 20px 15px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 90%;
+    height: 60vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+label .Flip-card {
+
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+}
+
+.Flip-card .front,
+.Flip-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgb(46, 44, 44);
+    filter: drop-shadow(0px 0px 4px white);
+    color: white;
+    backface-visibility: hidden;
+
+}
+
+.Flip-card .front .mall p {
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgb(12, 12, 12);
+    color: white;
+    border: none;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.Flip-card .back {
+    display: flex;
+    flex-direction: column;
+}
+
+.Flip-card .back p {
+    width: 80%;
+    margin: auto;
+}
+
+.Flip-card .back .click {
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin-top: 120px;
+}
+
+.Flip-card .back .click {
+    background: rgb(246, 244, 244);
+    padding: 10px 20px;
+    margin-top: 120px;
+    background: rgb(12, 12, 12);
+    color: white;
+
+
+    /* width: 50%; */
+    /* margin: auto; */
+
+
+
+
+}
+.Flip-card .back .click a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.Flip-card .back {
+    transform: rotateX(180deg);
+}
+
+label:hover .Flip-card {
+    transform: rotateX(2deg);
+}
+
+.check {
+    display: none;
+}
+
+:checked+.Flip-card {
+    transform: rotateX(180deg);
+}
+
+label:hover :checked+.Flip-card {
+    transform: rotateX(175deg);
+
+}
+.front h3{
+    font-size: 30px;
+}
+.mall b{
+    font-size: 17px;
+}
+.back h1{
+    margin: 20px 0px;
+    font-size: 20px;
+}
+.back p{
+    width: 100%;
+    font-size: 80%;
+}
+
+.Flip-card img {
+    width: 60%;
+    height: 200px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    .mainDicover {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainDicover {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+     .mainSongs .songName .songs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+@media screen and (max-width: 360px ) {
+    .back p{
+        width: 100%;
+        font-size: 70%;
+    }
+}@media screen and (max-width: 315px ) {
+    .back p{
+        width: 100%;
+        font-size: 60%;
+    }
+    label {
+        margin: 20px 10px;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        width: 90%;
+        height: 40vh;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+    .Flip-card img {
+        width: 60%;
+        height: 100px;
+        /* margin: 10px 0px 20px 0px; */
+        border-radius: 50%;
+    }
+    .front h3{
+        font-size: 10px;
+    }
+    .mall b{
+        font-size: 10px;
+    }
+    .Flip-card .front .mall p{
+        width: 100%;
+        padding: 5px;
+        margin-top: ;
+    }
+}

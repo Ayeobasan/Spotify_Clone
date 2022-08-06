@@ -1,0 +1,366 @@
+ .leftMenu {
+     width: 20%;
+     height: 100%;
+     z-index: 1;
+     min-height: 100vh;
+     background: black;
+     backdrop-filter: blur(5px);
+     padding: 20px 15px;
+     overflow: hidden;
+     transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+ }
+
+ .leftMenu .spotify {
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .leftMenu .spotify h2 {
+     font-size: 20px;
+ }
+
+ .leftMenu .spotify i {
+     font-size: 30px;
+ }
+
+ .leftMenu .spotify i:nth-child(3) {
+     font-size: 20px;
+ }
+
+ .searchBox {
+     width: 100%;
+     height: 45px;
+     position: relative;
+     margin: 20px 0px;
+     color: #848484;
+     overflow: hidden;
+     border-radius: 10px;
+     box-shadow: 0px 0px 20px rgba(58, 56, 56, 0.5);
+ }
+
+ .searchBox input {
+     width: 100%;
+     height: 100%;
+     border: none;
+     outline: none;
+     background-color: rgba(0, 0, 0, 0.5);
+     padding-left: 45px;
+     color: white;
+     font-size: 14px;
+     font-weight: bold;
+
+ }
+
+ .searchBox i {
+     position: absolute;
+     top: 0;
+     left: 0;
+     color: #848484;
+     width: 23%;
+     height: 45px;
+     text-align: center;
+     line-height: 45px;
+     font-size: 20px;
+ }
+
+ .MenuContainer {
+     /* align-items: center; */
+     display: flex;
+     /* justify-content: space-between; */
+     flex-direction: column;
+     /* margin-top: 15px 0px; */
+ }
+
+ .MenuContainer .title {
+     color: #848484;
+     font-size: 12px;
+     font-weight: bold;
+     margin-bottom: 10px;
+     text-transform: uppercase;
+ }
+
+ .MenuContainer ul {
+     width: 100%;
+     padding: 0;
+ }
+
+ .MenuContainer ul li {
+     list-style: none;
+     margin: 5px 0px;
+     width: 100%;
+     padding: 5px 0px;
+     position: relative;
+ }
+
+ .MenuContainer ul li p {
+     list-style: none;
+     text-decoration: none;
+     color: #848484;
+     display: flex;
+     align-items: center;
+     font-size: 16px;
+ }
+
+ .MenuContainer ul li p span a {
+     text-decoration: none;
+     text-align: none;
+     color: #848484;
+     font-size: 16px;
+ }
+
+ .MenuContainer ul li p i a {
+     text-decoration: none;
+     text-align: none;
+     color: #848484;
+     font-size: 18px;
+     margin-right: 15px;
+ }
+
+ .MenuContainer ul li::before {
+     position: absolute;
+     content: '';
+     top: 0;
+     left: -15px;
+     width: 0;
+     background: #49e12e;
+     height: 100%;
+     border-radius: 5px;
+ }
+
+ .MenuContainer ul li:hover::before,
+ .MenuContainer ul li.active::before {
+     width: 5px;
+     transition: 0.3s;
+ }
+
+ .MenuContainer ul li:hover p,
+ .MenuContainer ul li.active p {
+     color: white;
+     transition: 0.3s;
+
+ }
+
+ .playListContainer {
+     cursor: pointer;
+     margin: 15px 0px;
+ }
+
+ .nameContainer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: #848484;
+     margin-bottom: 10px;
+ }
+
+ .nameContainer p {
+     font-size: 12px;
+     text-transform: uppercase;
+     font-weight: bold;
+ }
+
+ .nameContainer i {
+     cursor: pointer;
+     color: white;
+ }
+
+ .PlayListScroll {
+     height: 140px;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     position: relative;
+ }
+
+ .PlayList {
+     display: flex;
+     color: #848484;
+     align-items: center;
+ }
+
+ .PlayList i {
+     font-size: 18px;
+     margin: 7px 0px;
+ }
+
+ .PlayList .list {
+     margin-right: 15px;
+ }
+
+ .PlayList p {
+     margin-right: auto;
+     font-size: 16px;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     display: inline;
+ }
+
+ .PlayList:hover {
+     color: white;
+     transition: o.3s;
+     cursor: pointer;
+ }
+
+ .trackList {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     padding-top: 20px;
+ }
+
+ .trackList .top {
+     width: 100%;
+
+     display: flex;
+     align-items: center;
+ }
+
+ .trackList .top img {
+     width: 50px;
+ }
+
+ .trackList .top p {
+     margin-left: 10px;
+     color: white;
+     font-size: 14px;
+ }
+
+ .trackList .top p span {
+     display: block;
+     font-size: 12px;
+     color: #848484;
+
+ }
+
+ .trackList .bottom {
+     z-index: 99;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 20px;
+     color: #848484;
+ }
+
+ .trackList .bottom i {
+     font-size: 18px;
+ }
+
+ .trackList .bottom i:hover {
+     color: white;
+     transition: 0.3s;
+     cursor: pointer;
+ }
+
+ .trackList .bottom input {
+     position: relative;
+     width: 50%;
+     height: 5px;
+     outline: none;
+     border: none;
+     border-radius: 5px;
+     background: rgba(255, 255, 255, 0.1);
+     appearance: none;
+ }
+
+
+ /* Chrome & Safari  */
+
+ .trackList .bottom input::before {
+     position: absolute;
+     content: '';
+     top: 0;
+     left: 0;
+     width: var(--player-width);
+     height: 100%;
+     border-radius: 10px;
+     background: #49e12e;
+     z-index: 2;
+     transition: width 250ms linear;
+ }
+
+ .trackList .bottom input::-webkit-slider-thumb {
+     -webkit-appearance: none;
+     width: 10px;
+     height: 20px;
+     border-radius: 10px;
+     background: white;
+     border: 2px solid #000;
+     cursor: pointer;
+     position: relative;
+     margin: -2px 0 0 0;
+     z-index: 3;
+     transition: all 250ms linear;
+
+ }
+
+ @media screen and (max-width: 1024px) {
+     .leftMenu {
+         min-width: 20%;
+         width: 20%;
+     }
+ }
+
+ @media screen and (max-width: 768px) {
+     .leftMenu {
+         min-width: 60px;
+         width: 60px;
+     }
+
+     .searchBox {
+         display: none;
+     }
+
+     .trackList {
+         display: none;
+     }
+
+     .playListContainer {
+         display: none;
+     }
+
+     .MenuContainer ul li p span a {
+         display: none;
+     }
+
+     .MenuContainer ul li p i a {
+         font-size: 30px;
+     }
+
+     .MenuContainer ul li {
+         margin: 50px 0;
+     }
+
+     .leftMenu h2 {
+         margin-left: 20px;
+     }
+ }
+
+ @media screen and (max-width: 450px) {
+     .leftMenu {
+         min-width: 50px;
+         width: 50px;
+     }
+
+     .MenuContainer ul li p i a {
+         font-size: 20px;
+     }
+
+     .leftMenu .spotify i {
+         font-size: 25px;
+     }
+
+     .MenuContainer {
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+         text-align: center;
+     }
+
+     .MenuContainer .title {
+         font-size: 10px;
+     }
+ }

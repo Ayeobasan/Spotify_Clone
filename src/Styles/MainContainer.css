@@ -1,0 +1,411 @@
+ .mainContainer {
+     width: 100%;
+     height: 100vh;
+     z-index: 1;
+     flex-grow: 1;
+     background: rgba(34, 34, 34, 0.6);
+     backdrop-filter: blur(10px);
+     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+ .see{
+     width: 100%;
+     height: 100%;
+ }
+ .search{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    border-radius: 10px ;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.search input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color:  rgba(0, 0, 0, 0.5);
+    padding-left:45px ;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.search input::placeholder{
+    color: white;
+}
+.search .ic {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    color:  white;
+    width: 190%;
+    /* height: 45px; */
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    /* margin-right: 50px; */
+}
+.search .ic button{
+    background: #49e12e;
+    color: white;
+    font-size: 20px;
+    border-start-end-radius: 20px;
+    border-end-end-radius: 20px;
+    border: none;
+    padding: 20px 50px;
+}
+
+ .audioList {
+     padding: 5px 0px;
+ }
+
+ .audioList .title {
+     font-size: 20px;
+     color: white;
+     margin: 20px;
+ }
+
+ .audioList .title span {
+     font-size: 12px;
+     color: #848484;
+ }
+
+ .mainSongs {
+     display: flex;
+     align-items: center;
+     font-size: 14px;
+     font-weight: 600;
+     color: #848484;
+     width: 100%;
+     margin: 10px 0;
+     padding: 5px;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .mainSongs .num {
+     margin-right: 20px;
+ }
+
+ .songContainer {
+     padding: 10px 30px;
+     overflow-x: hidden;
+     overflow-y: scroll;
+     height: 65vh;
+ }
+
+ .songName:hover {
+     color: white;
+     transition: 0.3s;
+ }
+
+ .songName img {
+     width: 45px;
+     height: 45px;
+     border-radius: 0.5rem;
+     background: #555;
+     margin-right: 20px;
+     overflow: hidden;
+ }
+
+ .songName {
+     align-items: center;
+     width: 100%;
+     display: flex;
+     padding-bottom: 5px;
+     cursor: pointer;
+ }
+
+ .songs {
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .songs p {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 50%;
+ }
+
+ .songs .hit {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .songs .hit .head,
+ .songs .hit .time,
+ .songs .hit .hearts {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .songs .hit .heads,
+ .songs .hit .time {
+     margin-right: 15px;
+ }
+
+ .songs .hit .heads i,
+ .songs .hit .time i {
+     margin-right: 5px;
+ }
+ .songs h3{
+    color: white;
+    filter: drop-shadow(0px 0px 4px #386c2f);
+ }
+ .hearts {
+     color: #49e12e;
+     filter: drop-shadow(0px 0px 4px #49e12e);
+ }
+
+ .mainContainer .lastPlay {
+     margin: 20px;
+     height: 50px;
+     background: transparent;
+     overflow: hidden;
+     color: white;
+     width: 95%;
+     box-shadow: 0px 0px 20px rgb(0 0 0 / 40%);
+ }
+
+ .mainContainer .lastPlay h1 span {
+     font-size: 20px;
+     color: #555;
+ }
+
+ .allSongs {
+     margin: 20px;
+     margin-bottom: 100px;
+     display: grid;
+     height: 90vh;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     gap: 15px;
+    
+ }
+
+ .newSongs {
+     position: relative;
+     background: rgb(34, 34, 34);
+     width: 100%;
+     height: 300px;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0px 0px 20px rgb(0 0 0 / 40%);
+ }
+
+ .topSongs img {
+     padding: 10px 10px 10px;
+     position: absolute;
+     border-radius: 20px;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     background-position: center;
+ }
+
+ .topSongs .friday {
+     width: 100%;
+     position: absolute;
+     padding: 210px 30px 100px;
+
+ }
+
+ .topSongs span {
+    color: rgb(7, 7, 7);
+     filter: drop-shadow(0px 0px 4px #49e12e);
+ }
+ .topSongs span:hover{
+    color: rgb(7, 7, 7);
+
+ }
+
+ .topSongs h3 {
+     color: white;
+     width: 100%;
+     font-size: 20px;
+ }
+
+ .topSongs p {
+     color: white;
+     align-items: center;
+     font-size: 15px;
+     width: 80%;
+     position: absolute;
+ }
+
+ .topSongs .pausedplay {
+     margin: 20px 200px 20px;
+     padding: 5px 7px;
+     border-radius: 100%;
+     bottom: 0;
+     position: absolute;
+     background-color: #49e12e;
+     filter: drop-shadow(0px 0px 4px #49e12e);
+ }
+
+ .topSongs .pausedplay i {
+     font-size: 25px;
+ }
+
+ @media screen and (max-width: 1350px ) {
+     .allSongs {
+         margin: 0;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr ;
+         overflow-x: scroll;
+     }
+ }
+ @media screen and (max-width: 1024px ) {
+    .allSongs {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+        /* height: 100%; */
+        overflow-x: scroll;
+    }
+}
+@media screen and (max-width: 700px ) {
+    .allSongs {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr  ;
+        overflow-x: scroll;
+    }
+}
+
+
+ @media screen and (max-width: 768px) {
+     .mainContainer .lastPlay{
+         margin: 0;
+     }
+    
+     .audioList {
+         padding: 40px 10px;
+     }
+
+     .audioList .mainSongs .songName .songs {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .mainSongs .songName .songs p {
+         width: 100%;
+     }
+
+     .mainSongs .songName .hit {
+         margin-left: 0;
+         margin-top: 10px;
+         justify-content: space-between;
+         width: 100%;
+     }
+
+ } 
+ @media screen and (max-width: 480px) {
+
+    .songContainer {
+        padding:0;
+    }
+    .songContainer .mainSongs{
+        display: block;
+    }
+}
+ @media screen and (max-width: 400px) {
+    .mainContainer .lastPlay{
+        font-size: 10px;
+        padding: 10px;
+    }
+    .newSongs .topSongs .friday{
+        margin: -50px 0px 0px;
+    }
+    .newSongs .topSongs {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width: 370px) {
+    .mainSongs{
+        font-size: 12px;
+    }
+    .audioList .title{
+        margin: 10px;
+        font-size: 15px;
+    }
+    .songName{
+        display: block;
+        margin: 0;
+        
+    }
+
+
+    .songName .hit .time{
+        display: block;
+    }
+}
+@media screen and (max-width: 340px) {
+    .mainContainer .lastPlay h1{
+        font-size: 15px;
+        padding: 5px;
+    }
+    .mainContainer .lastPlay h1 span{
+        font-size: 10px;
+    }
+    .songName{
+        display: block;
+    }
+    .songName .songs p{
+        display: block;
+    }
+    .songName .hit .time{
+        display: block;
+    }
+}
+@media screen and (max-width: 337px) {
+    .cover .top .middle {
+        width: 60%;
+    }
+
+}
+@media screen and (max-width: 338px), (max-width: 337px), (max-width: 336px)
+,(max-width: 220px) {
+    .mainContainer .lastPlay h1{
+        font-size: 15px;
+        padding: 5px;
+    }
+    .mainContainer .lastPlay h1 span{
+        font-size: 10px;
+    }
+    .songName{
+        display: block;
+    }
+    .songName .songs p{
+        display: flex;
+    }
+      
+    .songName .hit .time{
+        display: block;
+    }
+}
+ @media screen and (max-width: 290px) {
+    .newSongs .topSongs .friday{
+        margin: -70px 0px 0px;
+    }
+    .newSongs .topSongs .friday h3{
+        font-size: 15px;
+    }
+    .mainContainer .lastPlay{
+        font-size: 5px;
+        padding: 10px;
+    }
+
+}

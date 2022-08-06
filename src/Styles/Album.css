@@ -1,0 +1,38 @@
+.mainAlbum{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    flex-grow: 1;
+    overflow-x: scroll;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.mainSongs a{
+    list-style: none;
+    text-decoration: none;
+    color: #848484;
+}
+.mainSongs:hover a{
+    transition: ease-in-out 0.3s;
+    color: white;
+}
+.allSong{
+    height: 90vh;
+    overflow-x: hidden;
+}
+.mainAlbum .lastPlay  {
+    background-attachment: scroll;
+    /* margin: 20px; */
+    padding: 10px;
+    height: 50px;
+    background: transparent;
+    overflow: hidden;
+    color: white;
+    width: 95%;
+    width: 95%;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 40%);
+}
+.mainAlbum .lastPlay h2 span {
+    font-size: 20px;
+    color: #555;
+}
