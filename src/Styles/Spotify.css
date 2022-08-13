@@ -1,65 +1,54 @@
 .SpotifyContainer {
-    position: absolute;
-    background-color: rgb(0, 0, 0);
     height: 100vh;
-    color: white;
     width: 100%;
     display: flex;
-    text-align: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
+    background-color: rgb(0, 0, 0);
 }
 
 .music {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
-    padding: 37%;
+    justify-content: center;
+    width: 100%;
 }
 
 .music img {
-    width: 150%;
-    display: flex;
-    align-items: center;
+    max-width: 200px;
 }
 
 .spotText {
+    width: 100%;
     line-height: 30px;
     color: #1ED760;
-    margin-left: 60px;
 }
 
 .spotText p {
     font-size: 20px;
+    margin-left: 1.5em;
 }
 
 .spotText h1 {
     font-size: 60px;
 }
 
-.music a button {
+
+.SpotifyContainer a button {
     padding: 15px 50px;
     border: none;
     font: inherit;
     font-size: 20px;
     border-radius: 20px;
     background: #1ED760;
-    margin-left: 90%;
+    margin-top: -10em;
+    margin-left: 8em;
 
 
 }
 
 @media screen and (max-width:768px) {
-    .music {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        padding: 10%;
-    }
-
-    .music img {
-        width: 124%;
-    }
 
     .spotText {
         left: 62.5%;
@@ -68,55 +57,30 @@
     }
 }
 
-@media screen and (max-width:568px),
-(max-width:534px),
-(max-width:530px) {
-    .music img {
-        width: 134%;
-    }
-
-    .music {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        padding: 5%;
-    }
-}
-
 @media screen and (max-width:482px) {
-    .music {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        padding: 2%;
-    }
-
     .spotText h1 {
         font-size: 60px;
+    }
+    .spotText p {
+        font-size: 18px;
+        margin-left: 0.8em;
     }
 }
 
 @media screen and (max-width:414px) {
-
-    .music img {
-        width: 130%;
-    }
-
     .spotText h1 {
         font-size: 40px;
     }
 }
 
 @media screen and (max-width:325px) {
-    .music img {
-        width: 130%;
-    }
-
     .spotText h1 {
         font-size: 34px;
     }
-
-
+    .spotText p {
+        font-size: 16px;
+        margin-left: 0.7em;
+    }
 }
 
 @media screen and (max-width:303px) {
@@ -127,6 +91,7 @@
         justify-content: space-between;
         padding: 20px;
     }
+
     .music img {
         width: 100%;
     }
@@ -138,6 +103,7 @@
     .spotText h1 {
         font-size: 30px;
     }
+
     .music a button {
         padding: 15px 50px;
         border: none;
@@ -147,21 +113,19 @@
         background: #1ED760;
         margin-top: 40px;
         margin-left: 0%;
-    
-    
     }
 }
+
 @media screen and (max-width:200px) {
-    
+
     .music img {
         width: 100%;
     }
 
-  
-
     .spotText h1 {
         display: none;
     }
+
     .music a button {
         padding: 15px 50px;
         border: none;
@@ -171,14 +135,14 @@
         background: #1ED760;
         margin-top: 20px;
         margin-left: 0%;
-    
-    
     }
 }
+
 @media screen and (max-width:147px) {
-    .music img{
+    .music img {
         display: none;
     }
+
     .music a button {
         padding: 30px;
         border: none;
@@ -186,10 +150,6 @@
         font-size: 20px;
         border-radius: 100%;
         background: #1ED760;
-        /* margin-top: 20px; */
-        /* margin-left: 0%; */
-    
-    
     }
 
 }
