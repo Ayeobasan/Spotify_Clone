@@ -1,0 +1,263 @@
+.MusicPlayer{
+    margin: 5px 0px 20px 0px;
+    background: rgb(12, 12, 12);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-attachment: fixed;
+}
+.MusicPlayer .songImg{
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+.MusicPlayer .songImg img{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.MusicPlayer .cover{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.cover .top{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.top .left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10%;
+}
+.top .left .loved{
+    font-size: 18px;
+    color: #49e12e;
+    filter: drop-shadow(0px 0px 4px #49e12e);
+    cursor: pointer;
+}
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+.middle .backward i{
+    color: #f1f1f1;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.middle .forward i{
+    color: #f1f1f1;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.download i{
+    color: #f1f1f1 ;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.cover .top .right i{
+    color: #f1f1f1 ;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cover .bottom{
+    
+    margin: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pauseplay i{
+    background: #49e12e;
+    border-radius: 100%;
+    padding: 4px 6px;
+    cursor: pointer;
+}
+.cover .bottom .progressBar {
+    width: 78%;
+    position: relative;
+    height: 5px;
+    outline: none;
+    appearance: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+.cover .bottom .progressBar:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: #848484;
+    width: var(--played-player);
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+}
+
+.cover .bottom .progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+    transition: all 250ms linear;
+}
+
+ .bottom .currentTime,
+ .bottom .duration {
+    color: #f1f1f1;
+    font-size: 12px;
+    font-weight: bold;
+}
+@media screen and (max-width:925px) {
+    .cover .top .middle {
+        width: 40%;
+
+    }
+}
+@media screen and (max-width:790px) {
+    .cover .top .middle {
+        width: 50%;
+
+    }
+}
+ 
+@media screen and (max-width:768px) {
+    .cover .bottom{
+        padding: unset;
+    }
+    .cover .bottom .currentTime {
+        margin-right: 0px;
+    }
+
+    .cover .bottom .duration {
+        margin-left: 0px;
+    }
+
+    .cover .top .middle .back i,
+    .cover .top .middle .forward i {
+        margin: 0px 1px;
+    }
+
+    .cover .bottom .progressBar {
+        width: 65%;
+    }
+    .songImg{
+        width: 100px;
+    }
+    .cover .top .left .loved{
+        margin: 0;
+    }
+
+} 
+@media screen and (max-width:620px) {
+    .cover .top .middle {
+        width: 70%;
+
+    }
+    .cover .top{
+        padding: 10px;
+    } 
+    
+    
+}
+ @media screen and (max-width: 550px) and (max-width: 1080px) {
+    .songImg {
+        width: 100px;
+    }
+} @media screen and (max-width: 370px) {
+    
+    .songImg{
+        width: 0px;
+    }
+
+    .cover .top .left{
+        display: block;
+    }
+    .cover .top .middle {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 360px) {
+ 
+    .cover .top .left{
+        display: block;
+    }
+    .cover .top .middle {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 360px) {
+    .so{
+        display: block;
+    }
+    .cover .top .middle {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 358px) {
+    .cover .top .middle {
+        width: 80%;
+    }
+    .cover .top .left{
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 325px) {
+    .songs p{
+        font-size: 10px;
+    }
+    .MusicPlayer{
+        padding: 10px 0px;
+    }
+    .cover .top .middle {
+        width: 70%;
+    }
+    .cover .top .left{
+        display: block;
+    }
+    .MusicPlayer .songImg{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 290px) {
+    .MusicPlayer{
+        padding: 10px 0px;
+    }
+    .audioList .title{
+        font-size: 10px;
+    }
+    .audioList .title span{
+        font-size: 7px;
+    }
+    .cover .top .middle {
+        width: 80%;
+    }
+}

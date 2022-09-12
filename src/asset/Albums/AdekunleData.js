@@ -1,0 +1,85 @@
+import ade from '../../asset/albumImage/ade.jpg'
+
+const AdekunleData =[
+
+    {
+        id: 1,
+        favourite: false,
+        songName: "Mercy", 
+        artist: "Adekunle Gold",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Mercy-(TrendyBeatz.com).mp3",
+        imgSrc: ade,
+      },
+      {
+        id: 2,
+        favourite: false,
+        songName: "Catch Me If You Cant",
+        artist: "Adekunle Gold",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Catch-Me-If-You-Can-(TrendyBeatz.com).mp3",
+        imgSrc: ade,
+      },
+      {
+        id: 3,
+        favourite: false,
+        songName: "Dior Dior Dior",
+        artist: "Adekunle Gold  ft Foushee",
+        song: " https://cdn.trendybeatz.com/audio/Adekunle-Gold-Ft-Foushee-Dior-Dior-Dior-(TrendyBeatz.com).mp3",
+        imgSrc:ade,
+      },
+      {
+        id: 4,
+        favourite: false,
+        songName: "Selah",
+        artist: "Adekunle Gold",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Selah-(TrendyBeatz.com).mp3",
+        imgSrc:ade,
+      },
+      {
+        id: 5,
+        favourite: false,
+        songName: "Sleep",
+        artist: "Adekunle Gold",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Sleep-(TrendyBeatz.com).mp3",
+        imgSrc:ade,
+      },
+      {
+        id: 6,
+        songName: "More Than Enough",
+        artist: "Adekunle Gold",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-More-Than-Enough-(TrendyBeatz.com).mp3",
+        imgSrc:ade,
+      },
+      {
+        id: 7,
+        favourite: false,
+        songName: "One Woman ",
+        artist: "Adekunle Gold  ft Ty Dolla",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Ft-Ty-Dolla-Sign-One-Woman-(TrendyBeatz.com).mp3",
+        imgSrc: ade,
+      },
+      {
+        id: 8,
+        favourite: false,
+        songName: "Born Again ",
+        artist: "Adekunle Gold ft Fatoumata Diawara",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Ft-Fatoumata-Diawara-Born-Again-(TrendyBeatz.com).mp3",
+        imgSrc: ade,
+      },
+      {
+        id: 9,
+        favourite: false,
+        songName: " FYE ",
+        artist: "Adekunle Gold ft Stefflon",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Ft-Stefflon-Don-FYE-(TrendyBeatz.com).mp3",
+        imgSrc: ade,
+      },
+      {
+        id: 10,
+        favourite: false,
+        songName: "Mase Mi Turkish Folk Battle Song",
+        artist: "Adekunle Gold",
+        song: "https://cdn.trendybeatz.com/audio/Adekunle-Gold-Mase-Mi-(TrendyBeatz.com).mp3",
+        imgSrc:ade,
+      },
+]
+export { AdekunleData };
